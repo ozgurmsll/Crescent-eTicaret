@@ -1,0 +1,44 @@
+.geriDön{
+  width:120px;
+  background-color: rgb(40, 65, 229);
+}
+
+body{background:#eee}.ratings i{font-size: 16px;color: rgb(255, 102, 0)}.strike-text{color: rgb(255, 102, 0);text-decoration: line-through}.product-image{width: 100%}.dot{height: 7px;width: 7px;margin-left: 6px;margin-right: 6px;margin-top: 3px;background-color: blue;border-radius: 50%;display: inline-block}.spec-1{color: #938787;font-size: 15px}h5{font-weight: 400}.para{font-size: 16px}
+.x{
+display: flex;
+
+align-items: flex-end;
+}
+
+.sepet{
+  width:120px;
+  background-color: rgba(200, 109, 34, 0.825);
+  color: white;
+  border: none;
+  height: 40px;
+}
+.sepet:hover{
+  background-color: rgba(84, 200, 34, 0.925);
+  color: white;
+}
+.fiyat{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:200px;
+  height: 50px;
+  border:2px solid #ccc;
+  border-radius: 5px;
+}
+
+.quan{
+  display: none;
+}
+.text2
+{
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(226, 111, 17);
+  margin-left: 10px;
+}

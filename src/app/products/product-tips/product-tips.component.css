@@ -1,0 +1,42 @@
+.x {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  width: 100%;
+  height: 58%;
+}
+.card-img-top{
+  height: 200px;
+}
+.card{
+  height: 350px;
+}
+.card-body
+{
+  display: flex;
+  flex-direction: column;
+}
+.geridön
+{
+  background-color: rgb(40, 65, 229);
+
+}
+@media (max-width: 947px) {
+
+
+  .x {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "..";
+    width: 100%;
+    height: 58%;
+  }
+  .col-3{
+    width: 100%;
+  }
+}

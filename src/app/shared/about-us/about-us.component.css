@@ -1,0 +1,28 @@
+.mainx
+{
+  width: 100%;
+  height: 1000px;
+  background: rgb(0,0,0);
+  background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 4%, rgba(1,1,0,0.6758053563222164) 6%, rgba(211,250,0,1) 100%);
+  color: white;
+}
+.img{
+  border-radius: 50%;
+}
+.about-box{
+  border-radius: 10px;
+}
+.mt-5{
+  margin-top: 60px !important;
+}
+.card{
+  color:black
+}
+.to{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 42%;
+  margin-top: 20px;
+}
+

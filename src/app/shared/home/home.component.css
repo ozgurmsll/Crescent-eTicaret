@@ -1,0 +1,188 @@
+body {
+  margin: 0;
+  background-color: rgb(41, 41, 41);
+  text-align: center;
+  font-family: sans-serif;
+  color: #747474;
+}
+.text1 {
+  color: white;
+  font-size: 20px;
+}
+.container {
+  position: relative;
+  width: 320px;
+  margin: 100px auto 0 auto;
+  perspective: 1000px;
+}
+.deneme {
+  position: relative;
+  margin-top: 0px;
+  background-color: rgba(241, 0, 0, 0.796);
+
+  height: 50px;
+}
+@keyframes scroll-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.home-2 {
+  height: 850px;
+  background-color: rgba(201, 201, 201, 0.38);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.icons-home {
+  display: inline;
+  margin-left: 50%;
+  padding-bottom: 30px;
+}
+
+.icons-home .two-icons {
+  position: absolute;
+  top: 65px;
+  width: 110px;
+  height: 110px;
+  left: 10%;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  animation: rotate360 5s infinite forwards linear;
+}
+
+.icons-home .for-icons {
+  position: absolute;
+  top: 65px;
+
+  width: 110px;
+  height: 110px;
+  left: 20%;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  animation: rotate360 5s infinite forwards linear;
+}
+.icons-home .for-icons2 {
+  position: absolute;
+  top:65px;
+  width: 110px;
+  height: 110px;
+  left: 30%;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  animation: rotate360 5s infinite forwards linear;
+}
+.icons-home .for-icons3 {
+  position: absolute;
+  top:65px;
+  width: 110px;
+  height: 110px;
+  left: 40%;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  animation: rotate360 5s infinite forwards linear;
+}
+.icons-home .for-icons4 {
+  position: absolute;
+  top:65px;
+
+  width: 110px;
+  height: 110px;
+  left: 50%;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  animation: rotate360 5s infinite forwards linear;
+}
+
+.icons-home .for-icons5 {
+  position: absolute;
+
+  top: 65px;
+  width: 110px;
+  height: 110px;
+  left: 60%;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  animation: rotate360 5s infinite forwards linear;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+.icons-home .for-icons6 {
+  position: absolute;
+  top: 65px;
+  width: 110px;
+  height: 110px;
+  left: 70%;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  animation: rotate360 5s infinite forwards linear;
+}
+.icons-home .for-icons7 {
+  position: absolute;
+  top: 65px;
+  width: 110px;
+  height: 110px;
+  left: 80%;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  animation: rotate360 5s infinite forwards linear;
+}
+
+.card {
+  margin-right: 30px;
+  text-align: center;
+  border: none;
+  border-radius: 20px;
+  height:200px;
+  margin-bottom:230px !important;
+}
+.card-body {
+  background-color: rgb(69, 69, 69);
+  border: none;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+a {
+  text-decoration: none;
+  color: aliceblue;
+}
+a:hover {
+  color: rgb(241, 0, 0);
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
+@media (max-width: 847px) {
+
+
+  .for-icons2,
+  .for-icons3,
+  .for-icons4,
+  .for-icons5{
+    display: none;
+  }
+  .carousel {
+    display: none;
+    position: absolute;
+    height: 80px;
+    width: 100px;
+  }
+  .container {
+    position: relative;
+    width: 50px;
+    margin: 100px 0 0 0;
+    perspective: 1000px;
+  }
+}

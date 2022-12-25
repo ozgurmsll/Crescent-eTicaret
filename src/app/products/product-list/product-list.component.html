@@ -1,0 +1,47 @@
+
+
+<div class="my-3 ">
+  <div class="row mt-2">
+    <div class="col-3">
+      <category-list></category-list>
+    </div>
+    <div class="col-9 ">
+      <div class="container">
+        <div *ngFor="let product of products" class="ana-div">
+          <div  class="card  p-1">
+            <div class="col">
+              <div class="col-12">
+                <i class="fa-solid fa-heart" (click)="fav()"></i>
+                <img
+                  src="{{ product.urunFotograflari[0] }}"
+                  alt=""
+                  class="img-fluid rounded-start"
+                />
+              </div>
+              <hr>
+              <div class="col-12">
+                <div class="card-body text-center">
+                  <h5 class="card-title">{{ product.urunAdi }}</h5>
+                  <h5 class="card-title">{{ product.urunFiyati }} ₺</h5>
+                  <input type="number" min="1" id="quantity-{{ product.urunAdi }}" class="form-control quan" style="font-weight: 700;" value="1">
+                  <a
+                    routerLink="/products/{{ product.urunID }}"
+                    class="btn detay "
+                    >Ürün Detayı</a
+                  >
+                  <a class="btn sepet" (click)="addBasket(product)" >Sepete Ekle</a>
+                  <a
+                  *ngIf="isAdmin"
+                  class="btn btn-danger"
+                  >Ürünü Sil</a
+                >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+

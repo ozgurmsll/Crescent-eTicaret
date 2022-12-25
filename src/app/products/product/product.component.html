@@ -1,0 +1,60 @@
+<div class="row p-2 bg-white border rounded" *ngIf="product; else noProduct">
+  <div class="col-md-3 mt-1">
+    <img
+      class="img-fluid img-responsive rounded product-image"
+      src="{{ product.urunFotograflari[0] }}"
+    />
+  </div>
+  <div class="col-md-6 mt-1">
+    <h5>{{ product.urunAdi }}</h5>
+    <div class="d-flex flex-row">
+      <div class="ratings mr-2">
+        <i class="fa fa-star"></i><i class="fa fa-star"></i
+        ><i class="fa fa-star"></i><i class="fa fa-star"></i>
+      </div>
+      <span> </span>
+    </div>
+    <div class="mt-1 mb-1 spec-1">
+      <span class="dot"></span><span>{{ product.garanti.turu }}</span>
+    </div>
+    <div class="mt-1 mb-1 spec-1">
+      <span class="dot"></span><span>{{ product.garanti.sure }} Garantili </span>
+      <span class="fa fa-star checked"></span>
+    </div>
+    <p class="text-justify text para mb-0">{{ product.urunAciklamasi }}</p>
+  </div>
+  <input type="number" min="1" id="quantity-{{ product.urunAdi }}" class="form-control quan" style="font-weight: 700;" value="1">
+  <div
+
+    class="align-items-center align-content-center col-md-3 border-left mt-1"
+  >
+    <div class="d-flex flex-row align-items-center">
+      <h4 class="mr-1 fiyat">Fiyat {{ product.urunFiyati }} ₺  </h4>
+      <span class="strike-text" *ngIf="product.urunIndirim"
+        >Fiyat {{ product.urunIndirim }} ₺</span
+      >
+    </div>
+    <h6 class="text-success">{{ product.kampanyalar }}</h6>
+    <div class="d-flex flex-column  mt-4 x">
+      <button class="btn btn-primary btn-sm geriDön" type="button" routerLink="/products">Geri Dön</button
+      ><button class="btn btn-outline-primary btn-sm mt-2 sepet"  type="button" (click)="addBasket(product)">
+        Sepete Ekle
+      </button>
+    </div>
+  </div>
+</div>
+<ng-template #noProduct>
+  <div class="alert alert-warning">no product</div>
+</ng-template>
+<div *ngIf="" class="d-flex justify-content-center">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
+  <h3 class="text2">En Cok Satanlar</h3>
+  <product-tips></product-tips>
+
+
+
+

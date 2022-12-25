@@ -1,0 +1,16 @@
+<div class="x col">
+  
+  <div class="container" *ngFor="let product of products | slice:0:5 " >
+    <div  class="card mt-5 " style="width: 18rem;"  >
+      <img class="card-img-top" src="{{ product.urunFotograflari[0] }}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{ product.urunAdi}}</h5>
+        <p class="card-text">Fiyat {{ product.urunFiyati}} ₺</p>
+        <a href="#" class="btn btn-primary geridön"  routerLink="/products/{{ product.urunID }}" >Ürün detayı</a>
+      </div>
+    </div>
+   </div>
+</div>
+
+
+

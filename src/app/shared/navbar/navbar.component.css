@@ -1,0 +1,23 @@
+
+#navbarbg
+{
+  background-color:white !important;
+}
+.btn-outline-success
+{
+  background-color:antiquewhite;
+  color:black;
+}
+.btn-outline-success:hover{
+  background-color:aquamarine;
+}
+
+.nav-link:hover
+{
+  border-radius: 10px;
+  background-color: gray;
+}
+.sepet{
+  background-color: aliceblue;
+  border-radius: 10px;
+}

@@ -1,0 +1,13 @@
+.list-group-item:hover
+{
+  background-color:#838383;
+}
+.list-group-item{
+  background-color:#f0f4f5;
+  border:1px solid black;
+  color:black
+}
+.nav-item{
+  list-style-type: none;
+}
+

@@ -1,0 +1,36 @@
+<div class="list-group">
+  <a
+    (click)="selectCategory()"
+    class="list-group-item list-group-item-action"
+    [class.active]="displayAll"
+    routerLink="/products"
+  >
+    Tüm Kategoriler
+  </a>
+  <ul class="list-group-item">
+    <li class="nav-item dropdown">
+      <a
+        class="nav-link dropdown-toggle"
+        href="products"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Diger Kategoriler
+      </a>
+
+      <ul class="dropdown-menu">
+        <a
+          *ngFor="let category of products"
+          routerLink="/products/category/{{ category.kategori_ismi }}"
+          (click)="selectCategory(category)"
+          class="list-group-item list-group-item-action"
+          [class.active]="category == selectedCategory"
+        >
+          {{ category.kategori_ismi}}
+        </a>
+      </ul>
+    </li>
+  </ul>
+ 
+</div>

@@ -1,0 +1,101 @@
+<div class="container">
+
+  <div class="row px-md-4 px-2 pt-4">
+      <div class="col-lg-8 p-lg-2">
+          <p class="pb-2 fw-bold">Sepetim</p>
+          <div class="card">
+              <div>
+                  <div class="table-responsive px-md-4 px-2 pt-3">
+                      <table class="table table-borderless">
+                          <tbody *ngFor="let basket of baskets let index = index">
+                              <tr class="border-bottom">
+                                  <td>
+                                      <div class="d-flex align-items-center">
+                                          <div> <img class="pic" src="{{ basket.product.urunFotograflari[0] }}" alt=""> </div>
+                                          <div class="ps-3 d-flex flex-column justify-content">
+                                              <p class="fw-bold">{{ basket.product.urunAdi }}<span class="ps-1">Ürün</span></p> <small class=" d-flex"> <span class=" text-muted">Kategorisi:</span> <span class=" fw-bold">{{ basket.product.urunKategorisi}}</span> </small>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  <td>
+                                      <div class="d-flex">
+                                          <p class="pe-3"><span class="red">{{ basket.product.urunFiyati }} ₺</span></p>
+                                      </div>
+                                  </td>
+                                  <td>
+                                      <div class="d-flex align-items-center"> <span class="pe-3 text-muted">Miktar</span> <span class="pe-3"><input type="number" id="basketQuantity-{{ basket.product.urunAdi }}" #inputQuantity (click)="changeData(basket, inputQuantity)" min="1" class="form-control" [value]="basket.quantity"></span>
+
+                                      </div>
+                                  </td>
+                                  <td>
+                                    <button class="btn btn-sm btn-danger" (click)="deleteProduct(basket)">Sil</button>
+                                  </td>
+                              </tr>
+
+
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-4 payment-summary">
+          <p class="fw-bold pt-lg-0 pt-4 pb-2">Ödeme Sayfası</p>
+          <div class="card px-md-3 px-2 pt-4">
+              <div class="unregistered mb-4"> <span class="py-1">unregistered account</span> </div>
+              <div class="d-flex justify-content-between pb-3"> <small class="text-muted">İndirim  Kodu</small>
+                  <p class="">VC115665</p>
+              </div>
+              <div class="d-flex justify-content-between b-bottom"> <input type="text" class="ps-2" placeholder="COUPON CODE">
+                  <div class="btn btn-primary" (click)="kuponCode()">Uygula</div>
+              </div>
+              <div class="d-flex flex-column b-bottom">
+
+                  <div class="d-flex justify-content-between"> <small class="text-muted">Toplam Ödenecek Miktar</small>
+                      <p [innerText]="this.total | currency: 'TRY': 'symbol-narrow':'1.2-2'"></p>
+                  </div>
+                     <button type="button"class="btn x"  data-bs-toggle="modal" data-bs-target="#paymentModal">Siparişi Tamamla</button>
+
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-8 delivery px-md-3 px-1">
+          <p class="pt-4 fw-bold pb-3 ps-2">Kargo</p>
+          <div class="d-md-flex justify-content-between align-items-center pb-4">
+              <div class="size d-flex ps-4"> <label class="option d-flex align-items-center"> <input type="radio" name="radio">
+                      <div class="card">
+                          <div class="d-flex align-items-center">
+                              <div class="d-flex align-items-center justify-content-center"> <img class="del" src="https://www.freepnglogos.com/uploads/ups-logo-transparent/ups-airlines-aviation-22.png" alt="">
+                                  <p class="ps-2">Aras</p>
+                              </div>
+                              <div class=" d-flex flex-column px-3">
+                                  <p class="fw-bold pb-1"><span>Hızlı Teslimat</span></p>
+                              </div>
+                              <p class="fw-bold">15.25 ₺</p>
+                          </div>
+                      </div> <span class="checkmark"></span>
+                  </label> </div>
+
+          </div>
+          <div class="d-md-flex justify-content-between align-items-center pb-4">
+            <div class="size d-flex ps-4"> <label class="option d-flex align-items-center"> <input type="radio" name="radio">
+                    <div class="card">
+                        <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center"> <img class="del" src="https://www.freepnglogos.com/uploads/ups-logo-transparent/ups-airlines-aviation-22.png" alt="">
+                                <p class="ps-2">Mng</p>
+                            </div>
+                            <div class=" d-flex flex-column px-3">
+                                <p class="fw-bold pb-1"><span>Hızlı Teslimat</span></p>
+                            </div>
+                            <p class="fw-bold">13.25 ₺</p>
+                        </div>
+                    </div> <span class="checkmark"></span>
+                </label> </div>
+
+        </div>
+      </div>
+  </div>
+</div>
+
+
+<app-payment></app-payment>
